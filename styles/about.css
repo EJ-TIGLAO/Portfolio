@@ -1,0 +1,298 @@
+/**
+ * ABOUT.CSS
+ * ============================================
+ * Purpose: Styles for the About page and its components.
+ * Linked to: about.html  (also referenced from index.html when the About section
+ *            is included on the homepage)
+ * Contains:
+ * - About section layout and background
+ * - Name badge styling (optional)
+ * - About text content styling
+ * - Philosophy section with gradient background
+ * - Personal interests list with custom bullets
+ * - Call-to-action button
+ * - Responsive design for mobile devices
+ */
+
+/* ============================================
+   ABOUT SECTION
+   ============================================ */
+/* Main about section - white background */
+.about {
+    background-color: var(--bg-white);
+}
+
+/* About content container - centers and limits width */
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ============================================
+   NAME BADGE (OPTIONAL)
+   ============================================ */
+/* Name badge container - centered display of name */
+.name-badge {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+/* Name text styling - light blue bordered box */
+.name-text {
+    display: inline-block;
+    padding: 12px 32px;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    border: 2px solid #e0f2fe;
+    border-radius: 12px;
+    background: rgba(224, 242, 254, 0.3);
+    letter-spacing: 0.02em;
+}
+
+/* ============================================
+   ABOUT TEXT CONTENT
+   ============================================ */
+/* About text container - centered paragraphs */
+.about-text {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+/* About paragraph styling */
+.about-text p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    font-weight: 400;
+}
+
+/* First paragraph - slightly larger and darker */
+.about-text p:first-child {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+/* ============================================
+   PHILOSOPHY SECTION
+   ============================================ */
+/* Philosophy section - gradient background box */
+.about-philosophy {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Philosophy title - "What Drives Me" */
+.philosophy-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+}
+
+/* Decorative underline for philosophy title */
+.philosophy-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    border-radius: 2px;
+}
+
+/* Philosophy text content */
+.philosophy-text {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--text-light);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* ============================================
+   PERSONAL INTERESTS SECTION
+   ============================================ */
+/* Personal section container - "Beyond Coding" */
+.about-personal {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+/* Personal title - "Beyond Coding" */
+.personal-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+/* Decorative underline for personal title */
+.personal-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    border-radius: 2px;
+}
+
+/* Personal interests list - bulleted list */
+.personal-list {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+    display: block;
+}
+
+/* Individual list item */
+.personal-list li {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--text-light);
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+/* Custom bullet point - blue triangle arrow */
+.personal-list li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Remove margin from last list item */
+.personal-list li:last-child {
+    margin-bottom: 0;
+}
+
+/* ============================================
+   CALL TO ACTION
+   ============================================ */
+/* CTA container - "See My Skills" button */
+.about-cta {
+    text-align: center;
+    margin-top: 2.5rem;
+}
+
+/* CTA button - matches hero button style */
+.about-cta .btn-primary {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    color: white;
+    padding: 14px 36px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.25), 0 4px 10px rgba(59, 130, 246, 0.15);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* CTA button hover state */
+.about-cta .btn-primary:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 12px 35px rgba(59, 130, 246, 0.35), 0 6px 15px rgba(59, 130, 246, 0.2);
+}
+
+/* CTA button active state */
+.about-cta .btn-primary:active {
+    transform: translateY(0) scale(1.02);
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+/* Tablet and smaller screens (max-width: 768px) */
+@media (max-width: 768px) {
+    .name-text {
+        font-size: 1.15rem;
+        padding: 10px 28px;
+    }
+
+    .about-text p {
+        font-size: 1.05rem;
+    }
+
+    .about-text p:first-child {
+        font-size: 1.15rem;
+    }
+
+    .philosophy-title,
+    .personal-title {
+        font-size: 1.3rem;
+    }
+
+    .philosophy-text {
+        font-size: 1rem;
+    }
+
+    .personal-list li {
+        font-size: 1rem;
+    }
+
+    .about-philosophy {
+        padding: 1.5rem;
+    }
+}
+
+/* Mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .name-text {
+        font-size: 1rem;
+        padding: 8px 24px;
+    }
+
+    .about-text p {
+        font-size: 1rem;
+    }
+
+    .about-text p:first-child {
+        font-size: 1.1rem;
+    }
+
+    .philosophy-title,
+    .personal-title {
+        font-size: 1.2rem;
+    }
+
+    .philosophy-text {
+        font-size: 0.95rem;
+    }
+
+    .personal-list {
+        text-align: center;
+    }
+
+    .personal-list li {
+        font-size: 0.95rem;
+        text-align: left;
+    }
+
+    .about-cta .btn-primary {
+        padding: 12px 28px;
+        font-size: 0.95rem;
+    }
+}
