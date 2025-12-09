@@ -1,0 +1,166 @@
+/* CONTACT SECTION */
+/* Main contact section - white background, centered text */
+.contact {
+    background-color: var(--bg-white);
+    text-align: center;
+}
+
+/* CONTACT DESCRIPTION */
+/* Introduction text above contact information */
+.contact-description {
+    font-size: 1.15rem;
+    color: var(--text-light);
+    max-width: 650px;
+    margin: 0 auto 3rem;
+    line-height: 1.8;
+}
+
+/* CONTACT INFORMATION DISPLAY */
+/* Container for email and phone information */
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    margin-bottom: 3.5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Individual contact info item (email or phone) */
+.contact-info-item {
+    text-align: center;
+}
+
+/* Contact label (e.g., "Email", "Phone") */
+.contact-info-item h3 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Contact value (actual email or phone number) */
+.contact-value {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    font-weight: 500;
+    margin: 0;
+}
+
+/* SOCIAL LINKS SECTION */
+/* Social links container - separated from contact info */
+.contact-social {
+    margin-top: 3rem;
+    padding-top: 3rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Social section title - "Connect with me" */
+.social-title {
+    font-size: 1rem;
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 500;
+}
+
+/* Social links container - horizontal flex layout */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+/* SOCIAL ICON BUTTONS */
+/* Individual social icon - circular button */
+.social-link {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--primary-color);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+}
+
+/* Social icon hover state - lifts up and changes color */
+.social-link:hover {
+    transform: translateY(-5px) scale(1.1);
+    background: white;
+    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.25), 0 0 0 1px rgba(59, 130, 246, 0.1);
+    color: #3b82f6;
+    border-color: rgba(59, 130, 246, 0.2);
+}
+
+/* SVG icon inside social link */
+.social-link svg {
+    transition: transform 0.3s ease;
+}
+
+/* Icon scales up on hover */
+.social-link:hover svg {
+    transform: scale(1.1);
+}
+
+/* RESPONSIVE DESIGN */
+/* Tablet and smaller screens (max-width: 768px) */
+@media (max-width: 768px) {
+    .contact-description {
+        font-size: 1.05rem;
+        margin-bottom: 2.5rem;
+    }
+
+    /* Stack contact info vertically on smaller screens */
+    .contact-info {
+        flex-direction: column;
+        gap: 1.5rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .contact-info-item {
+        min-width: 100%;
+    }
+
+    .contact-social {
+        margin-top: 2.5rem;
+        padding-top: 2.5rem;
+    }
+}
+
+/* Mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .contact-description {
+        font-size: 1rem;
+    }
+
+    .contact-info-item {
+        text-align: center;
+    }
+
+    .contact-value {
+        font-size: 1rem;
+    }
+
+    /* Smaller social icons on mobile */
+    .social-link {
+        width: 44px;
+        height: 44px;
+    }
+
+    .social-link svg {
+        width: 20px;
+        height: 20px;
+    }
+}
